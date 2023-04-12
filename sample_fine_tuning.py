@@ -234,7 +234,7 @@ def main():
     
    
     training_args = TrainingArguments(
-      # output_dir="/content/small_fineTuning_model1", #все файлы
+      output_dir=args.dir_finetune, #все файлы
       logging_dir=args.dir_logging,
       overwrite_output_dir=True,
       num_train_epochs=args.epoch,
@@ -247,7 +247,7 @@ def main():
       save_strategy = args.strategy,
       label_names=['input_ids'],
       weight_decay=args.weight_decay,
-      report_to="all"
+      # report_to="all"
     )
     
     early_stopping_callback = EarlyStoppingCallback(early_stopping_patience=3, early_stopping_threshold=0.01)
