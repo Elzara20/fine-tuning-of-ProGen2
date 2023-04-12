@@ -199,7 +199,7 @@ def main():
 
     # (6) prepair training data for model
     # (6.1) split data into training and validation dataset
-    dataset_seq_new = dataset_seq_new[:100]
+    # dataset_seq_new = dataset_seq_new[:100] # check
     data_seq_train = dataset_seq_new[:int(len(dataset_seq_new)*0.8)]
     data_seq_val=dataset_seq_new[int(len(dataset_seq_new)*0.8):]
     data_name_train =dataset_names[:int(len(dataset_names)*0.8)]
